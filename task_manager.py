@@ -6,6 +6,9 @@ class TaskManager:
         self.tasks = []
 
     def add_task(self, description):
+        description = description.strip()
+        if not description:
+            raise ValueError("Task description cannot be empty.")
         self.tasks.append(description)
 
 
@@ -18,8 +21,12 @@ def main():
             choice = input("Choose an option: ").strip()
             if choice == "1":
                 description = input("Task description: ")
-                manager.add_task(description)
-                print("Task added.")
+                try:
+                    manager.add_task(description)
+                except ValueError as error:
+                    print(error)
+                else:
+                    print("Task added.")
             elif choice == "2":
                 if not manager.tasks:
                     print("No tasks yet.")
