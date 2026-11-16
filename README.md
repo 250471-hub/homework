@@ -32,3 +32,9 @@ python -m unittest discover -s tests -v
 - The student still needs to arrange a partner review, complete the conflict
   practice, merge after approval, and create the `v0.1.0` release on the merged
   `main` commit. Do not claim these steps are done without completing them.
+
+## Unit 4: Booking bug activity
+
+Run `python booking.py` to see the corrected booking boundary, and run
+`python test_booking.py` for the supplied checks. The reproduction, bug report,
+hypotheses, fix, and reflection are documented in `unit4_activity_answers.md`.
